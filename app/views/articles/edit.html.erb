@@ -1,0 +1,29 @@
+<h2>修改文章</h2>
+<!-- 由冒号（：）作前缀组成的字符串，例如:id，:first等等。Ruby把它们称之为symbol -->
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+
+    <% if @article && @article.errors.any? %>
+        <div id="error_explanation">
+          <h4>
+            <%= "#{@article.errors.count}个错误：" %>
+          </h4>
+          <ul>
+            <% @article.errors.full_messages.each do |msg|%>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <p>
+      <%= f.label :title, "标题" %>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :content, "内容" %>
+      <%= f.text_area :content %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
