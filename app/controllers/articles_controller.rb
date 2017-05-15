@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
   # POST /articles/create
   def create
     # rails 要求我们明确地告诉 Rails 哪些参数允许在控制器动作中使用
+    # 所以需要 params.require(:article).permit(:title, :content)
     @article = Article.new(params.require(:article).permit(:title, :content))
     if @article.save
       redirect_to @article
@@ -39,7 +40,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-
+  # DELETE /articles/1
   def destroy
     @article = Article.find(params[:id])
     # Article.delete

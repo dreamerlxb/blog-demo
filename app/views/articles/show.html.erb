@@ -7,4 +7,40 @@
   <%= @article.content %>
 </p>
 
-<%=link_to "返回", articles_path %>
+<h3>文章评论</h3>
+<% @article.comments.each do |comment| %>
+    <p>
+      <strong>标题:</strong>
+      <%= comment.title %>
+    </p>
+
+    <p>
+      <strong>内容:</strong>
+      <%= comment.content %>
+    </p>
+    <p>
+      <!-- 这里渲染成：<a data-confirm="确定删除吗？" rel="nofollow" data-method="delete" href="/articles/2/comments/1">删除评论</a>  -->
+      <%= link_to '删除评论', [comment.article, comment],
+                              method: :delete,
+                              data: { confirm: '确定删除吗？' } %>
+    </p>
+<% end %>
+
+<h2>添加评论</h2>
+<%= form_for [@article, @article.comments.build] do |f| %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :content %><br>
+      <%= f.text_area :content %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+
+<%= link_to '编辑', edit_article_path(@article) %> |
+<%= link_to '返回', articles_path %>
