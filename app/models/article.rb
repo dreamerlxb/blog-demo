@@ -5,5 +5,5 @@ class Article < ApplicationRecord
   # validates_pr
   has_many :comments, dependent: :destroy
 
-  scope
+  # scope
 end
