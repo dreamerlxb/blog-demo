@@ -3087,59 +3087,64 @@
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="689" parent="70" name="PRIMARY">
+    <column id="689" parent="70" name="status">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="690" parent="70" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="690" parent="71" name="id">
+    <column id="691" parent="71" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="691" parent="71" name="title">
+    <column id="692" parent="71" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="692" parent="71" name="content">
+    <column id="693" parent="71" name="content">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="693" parent="71" name="article_id">
+    <column id="694" parent="71" name="article_id">
       <Position>4</Position>
       <DataType>bigint(20)|0</DataType>
     </column>
-    <column id="694" parent="71" name="created_at">
+    <column id="695" parent="71" name="created_at">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="695" parent="71" name="updated_at">
+    <column id="696" parent="71" name="updated_at">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="696" parent="71" name="index_comments_on_article_id">
+    <index id="697" parent="71" name="index_comments_on_article_id">
       <ColNames>article_id</ColNames>
     </index>
-    <key id="697" parent="71" name="PRIMARY">
+    <key id="698" parent="71" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="698" parent="71" name="fk_rails_3bf61a60d3">
+    <foreign-key id="699" parent="71" name="fk_rails_3bf61a60d3">
       <ColNames>article_id</ColNames>
       <RefSchemaName>blogs</RefSchemaName>
       <RefTableName>articles</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="699" parent="72" name="version">
+    <column id="700" parent="72" name="version">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="700" parent="72" name="PRIMARY">
+    <key id="701" parent="72" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
       <Primary>1</Primary>
