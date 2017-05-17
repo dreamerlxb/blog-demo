@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
+  layout "article"
 
   def index
     @articles = Article.all
+    @page_title = 'My Blog'
   end
 
   # GET /articles/new
