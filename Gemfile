@@ -64,3 +64,6 @@ gem 'devcamp_view_tool', '~> 0.1.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+gem 'carrierwave-qiniu', '~> 1.1'
+# gem 'mime-types', '~> 3.1'
