@@ -198,7 +198,7 @@
       <System>1</System>
     </view>
     <table id="69" parent="7" name="ar_internal_metadata"/>
-    <table id="70" parent="7" name="articles"/>
+    <table id="70" parent="7" name="blogs"/>
     <table id="71" parent="7" name="comments"/>
     <table id="72" parent="7" name="portfolios"/>
     <table id="73" parent="7" name="schema_migrations"/>
@@ -3075,7 +3075,7 @@
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="688" parent="70" name="content">
+    <column id="688" parent="70" name="body">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
@@ -3127,147 +3127,150 @@
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="699" parent="71" name="index_comments_on_article_id">
-      <ColNames>article_id</ColNames>
-    </index>
-    <key id="700" parent="71" name="PRIMARY">
+    <key id="699" parent="71" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="701" parent="71" name="fk_rails_3bf61a60d3">
-      <ColNames>article_id</ColNames>
-      <RefSchemaName>blogs</RefSchemaName>
-      <RefTableName>articles</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="702" parent="72" name="id">
+    <column id="700" parent="72" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="703" parent="72" name="title">
+    <column id="701" parent="72" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="704" parent="72" name="body">
+    <column id="702" parent="72" name="body">
       <Position>3</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="705" parent="72" name="main_image">
+    <column id="703" parent="72" name="main_image">
       <Position>4</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="706" parent="72" name="thumb_image">
+    <column id="704" parent="72" name="thumb_image">
       <Position>5</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="707" parent="72" name="created_at">
+    <column id="705" parent="72" name="created_at">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="708" parent="72" name="updated_at">
+    <column id="706" parent="72" name="updated_at">
       <Position>7</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="709" parent="72" name="PRIMARY">
+    <column id="707" parent="72" name="subtitle">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="708" parent="72" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="710" parent="73" name="version">
+    <column id="709" parent="73" name="version">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="711" parent="73" name="PRIMARY">
+    <key id="710" parent="73" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="712" parent="74" name="id">
+    <column id="711" parent="74" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="713" parent="74" name="email">
+    <column id="712" parent="74" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="714" parent="74" name="encrypted_password">
+    <column id="713" parent="74" name="encrypted_password">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="715" parent="74" name="reset_password_token">
+    <column id="714" parent="74" name="reset_password_token">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="716" parent="74" name="reset_password_sent_at">
+    <column id="715" parent="74" name="reset_password_sent_at">
       <Position>5</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="717" parent="74" name="remember_created_at">
+    <column id="716" parent="74" name="remember_created_at">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="718" parent="74" name="sign_in_count">
+    <column id="717" parent="74" name="sign_in_count">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="719" parent="74" name="current_sign_in_at">
+    <column id="718" parent="74" name="current_sign_in_at">
       <Position>8</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="720" parent="74" name="last_sign_in_at">
+    <column id="719" parent="74" name="last_sign_in_at">
       <Position>9</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="721" parent="74" name="current_sign_in_ip">
+    <column id="720" parent="74" name="current_sign_in_ip">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="722" parent="74" name="last_sign_in_ip">
+    <column id="721" parent="74" name="last_sign_in_ip">
       <Position>11</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="723" parent="74" name="created_at">
+    <column id="722" parent="74" name="created_at">
       <Position>12</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="724" parent="74" name="updated_at">
+    <column id="723" parent="74" name="updated_at">
       <Position>13</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="725" parent="74" name="index_users_on_email">
+    <column id="724" parent="74" name="roles">
+      <Position>15</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="725" parent="74" name="name">
+      <Position>14</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="726" parent="74" name="index_users_on_email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="726" parent="74" name="index_users_on_reset_password_token">
+    <index id="727" parent="74" name="index_users_on_reset_password_token">
       <ColNames>reset_password_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="727" parent="74" name="PRIMARY">
+    <key id="728" parent="74" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="728" parent="74" name="index_users_on_email">
+    <key id="729" parent="74" name="index_users_on_email">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>index_users_on_email</UnderlyingIndexName>
     </key>
-    <key id="729" parent="74" name="index_users_on_reset_password_token">
+    <key id="730" parent="74" name="index_users_on_reset_password_token">
       <ColNames>reset_password_token</ColNames>
       <UnderlyingIndexName>index_users_on_reset_password_token</UnderlyingIndexName>
     </key>
