@@ -22,6 +22,8 @@
 
           <%= yield %>
 
+          <%= js add_gritter(flash[:notice], :title => "Pay attention!", :sticky => true) %>
+
           <%= render "shared/application_footer" %>
 
           <%= source_helper("application") %>

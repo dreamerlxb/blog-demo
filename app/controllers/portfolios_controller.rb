@@ -70,7 +70,7 @@ class PortfoliosController < ApplicationController
                                       :main_image,
                                       :thumb_image,
                                       technologies_attributes: [:name]
-    )
+                                     )
   end
 
   def set_portfolio_item

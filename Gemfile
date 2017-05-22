@@ -25,13 +25,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,18 +45,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 # 权限控制
 gem 'devise', '~> 4.3'
-
 gem 'petergate', '~> 1.7', '>= 1.7.3'
-
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 # 分页
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
-
 gem 'devcamp_view_tool', '~> 0.1.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
-
 gem 'carrierwave-qiniu', '~> 1.1'
-# gem 'mime-types', '~> 3.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.10'
+gem 'gritter', '~> 1.2'
