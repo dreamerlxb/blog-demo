@@ -27,5 +27,7 @@ module RubyDemo2
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # before_configuration :
   end
 end
