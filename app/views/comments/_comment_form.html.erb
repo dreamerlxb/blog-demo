@@ -1,0 +1,10 @@
+<% if logged_in?(:site_admin) %>
+    <div>
+      <%= form_for :comment, url: '#', html: { class: 'new_comment', id: 'new_comment' } do |f| %>
+          <div class="form-group">
+            <%= f.text_area 'content', placeholder: '添加评论',class: 'form-control' %>
+          </div>
+          <%= f.submit '提交', class: 'btn btn-primary'%>
+      <% end %>
+    </div>
+<% end %>
