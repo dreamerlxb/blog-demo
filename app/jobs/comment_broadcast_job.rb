@@ -2,6 +2,7 @@ class CommentBroadcastJob < ApplicationJob
   queue_as :default
 
   def perform(comment)
+    puts("commment  #{comment.inspect}")
     ActionCable.server.broadcast "blogs_#{comment.blog.id}_channel", comment: render_comment(comment)
   end
 
