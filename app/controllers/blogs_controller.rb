@@ -13,6 +13,10 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @blog = Blog.friendly.find(params[:id])
+    @comments = @blog.comments
+    # @blog = Blog.includes(:comments).friendly.find(params[:id])
+    # modify html title and keyword
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end

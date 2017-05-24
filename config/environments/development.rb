@@ -53,4 +53,8 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+
+  # 这里配置可用的i18n
+  config.i18n.available_locales = ['zh-CN', :en]
 end

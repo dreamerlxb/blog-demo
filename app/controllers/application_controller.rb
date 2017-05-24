@@ -4,7 +4,12 @@ class ApplicationController < ActionController::Base
   include CurrentUserConcern
 
   before_action :configure_permitted_parameters, if: :devise_controller?
-  # before_action :set_title
+
+  before_action :set_locale
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])

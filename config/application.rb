@@ -28,6 +28,8 @@ module RubyDemo2
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    # before_configuration :
+    # # 默认区域设置是 :en，config/locales/ 文件夹下的 .rb 和 .yml 翻译文件会被自动加载
+    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    # config.i18n.default_locale = :zh
   end
 end
