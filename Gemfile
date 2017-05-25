@@ -40,6 +40,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# group :production do
+#   gem 'pg', '~> 0.20.0'
+#   gem 'rails_12factor', '~> 0.0.3'
+# end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
@@ -62,5 +67,7 @@ gem 'gritter', '~> 1.2'
 gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
+
+ruby "2.4.1"
 
 gem 'rails-i18n', '~> 5.0', '>= 5.0.4'
