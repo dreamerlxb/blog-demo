@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: 123456
-  socket: /tmp/mysql.sock
+#  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: blogs
-#  username: root
-#  password: 123456
+  database: blogs_pro
+  username: root
+  password: <%= ENV.fetch("MYSQL_PASSWORD") %>
+  host: 211.87.227.215
+  port: 3306

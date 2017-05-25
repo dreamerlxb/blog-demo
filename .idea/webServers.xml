@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a0b174ba-6630-4c2a-8c0b-170d62aa721c" name="ruby-01" url="http://120.77.202.32">
+        <fileTransfer host="120.77.202.32" port="22" rootFolder="/root/ruby-demo-01" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
