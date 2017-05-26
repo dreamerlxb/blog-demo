@@ -6,13 +6,26 @@
   <% end %>
 
   <div class="form-group">
+    <%= f.select :topic_id, Topic.all.collect { |p| [ p.title, p.id ] },{}, class: 'form-control' %>
+    <!--<%= f.collection_select :topic_id, Topic.all, :id, :title,{ }, class: 'form-control' %>-->
+  </div>
+
+    <div class="form-group">
+      <%= f.radio_button :status, 'draft' %>
+      <%= f.label :status, 'Draft' %>
+      &nbsp;&nbsp;
+      <%= f.radio_button :status, 'published' %>
+      <%= f.label :status, 'Published' %>
+    </div>
+
+  <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
   <div class="form-group">
     <%= f.label :body %>
-    <%= f.text_area :body, class: 'form-control', rows: 15 %>
+    <%= f.text_area :body, class: 'form-control', rows: 10 %>
   </div>
 
   <div class="form-group">

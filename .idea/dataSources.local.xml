@@ -11,5 +11,32 @@
       <user-name>root</user-name>
       <introspection-schemas>*:blogs,information_schema</introspection-schemas>
     </data-source>
+    <data-source name="Rails RubyDemo2: development" uuid="18d8d189-1357-4b9c-bbd7-cb7249143f36">
+      <database-info product="MySQL" version="5.7.18" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:blogs</introspection-schemas>
+    </data-source>
+    <data-source name="Rails RubyDemo2: test" uuid="ea24403e-5540-4f04-86d7-27eaf7bab46f">
+      <database-info product="MySQL" version="5.7.18" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:blogs</introspection-schemas>
+    </data-source>
+    <data-source name="Rails RubyDemo2: production" uuid="1119aa50-c3a4-422e-a6d0-539cad096318">
+      <database-info product="MySQL" version="5.5.54-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <user-name>root</user-name>
+      <introspection-schemas>*:blogs_pro</introspection-schemas>
+    </data-source>
   </component>
 </project>

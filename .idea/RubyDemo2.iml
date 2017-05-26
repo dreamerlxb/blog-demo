@@ -209,6 +209,7 @@
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.4.1 [RubyDemo2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="petergate (v1.7.3, RVM: ruby-2.4.1 [RubyDemo2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v3.8.2, RVM: ruby-2.4.1 [RubyDemo2]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pygments.rb (v1.1.2, RVM: ruby-2.4.1 [RubyDemo2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="qiniu (v6.8.1, RVM: ruby-2.4.1 [RubyDemo2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.0.3, RVM: ruby-2.4.1 [RubyDemo2]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.4.1 [RubyDemo2]) [gem]" level="application" />
