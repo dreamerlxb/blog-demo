@@ -29,11 +29,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+zh-CN:
   hello: "Hello world"
-  web_name: "Ruby Blog"
-  home: "Home"
-  about: "About me"
-  contact: "Contact"
-  blog: "Blog"
-  portfolio: "Portfolio"
+  web_name: "红宝石博客"
+  home: "首页"
+  about: "关于"
+  contact: "联系"
+  blog: "博客"
+  portfolio: "作品"

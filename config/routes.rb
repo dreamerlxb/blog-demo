@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
+  get 'check', to: 'pages#check_markdown'
+
   resources :blogs do
     member do
       get :toggle_status

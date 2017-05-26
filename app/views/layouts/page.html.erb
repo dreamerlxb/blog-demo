@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <%= favicon_link_tag 'favicon/favicon_me.ico' %>
+  <title><%= @page_title %></title>
+
+  <%= csrf_meta_tags %>
+
+  <meta name="keywords" content="<%= @seo_keywords %>"/>
+
+  <%= stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<%= render 'shared/page_nav' %>
+  <%= yield %>
+  <div class="container marketing">
+    <hr class="featurette-divider">
+    <%= render 'shared/page_footer'%>
+  </div>
+</body>
+</html>

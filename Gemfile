@@ -48,6 +48,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 gem 'devise', '~> 4.3'
 gem 'petergate', '~> 1.7', '>= 1.7.3'
 
+# 样式
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 
@@ -75,7 +76,6 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 # markdown
 gem 'redcarpet', '~> 3.4'
 gem 'pygments.rb', '~> 1.1', '>= 1.1.2'
-
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 
 ruby "2.4.1"
