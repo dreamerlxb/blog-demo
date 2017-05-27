@@ -1,1 +1,19 @@
-<%= current_user.inspect %>
+<h2>个人信息</h2>
+<hr class="jumbotron-hr">
+<div class="table-responsive">
+  <div>
+    <img src="http://placehold.it/100x100" class="img-fluid rounded-circle" alt="user">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a class="btn btn-primary" style="position: relative">
+      修改头像<input type="file" class="avatar-input" style="display: none">
+    </a>
+  </div>
+  <hr class="jumbotron-hr">
+  <div>
+    <span>邮箱:</span> <%= current_user.email %>
+  </div>
+  <hr class="jumbotron-hr">
+  <div>
+    <span>昵称:</span> <input value="<%= current_user.name %>" class="form-control-sm">
+  </div>
+</div>
