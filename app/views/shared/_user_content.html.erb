@@ -1,0 +1,36 @@
+<h1>Dashboard</h1>
+<section class="row text-center placeholders">
+  <% [1, 2, 3, 4].each do |i| %>
+    <div class="col-6 col-sm-3 placeholder">
+      <img src="http://placehold.it/200x200" width="200" height="200" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+      <h4>Label<%= i %></h4>
+      <div class="text-muted">Something else</div>
+    </div>
+  <% end %>
+</section>
+
+<h2>Section title</h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Header</th>
+      <th>Header</th>
+      <th>Header</th>
+      <th>Header</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% [1, 2, 3, 4].each do |i| %>
+      <tr>
+        <td><%= i * 1000 %></td>
+        <td>Lorem-<%= i %></td>
+        <td>ipsum-<%= i %></td>
+        <td>dolor-<%= i %></td>
+        <td>sit-<%= i %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

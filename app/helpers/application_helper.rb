@@ -1,11 +1,14 @@
 module ApplicationHelper
+
   def login_helper style = ''
     if current_user.is_a?(GuestUser)
-      (link_to "注册", new_user_registration_path, class: style) +
-          " ".html_safe +
-          (link_to "登录", new_user_session_path, class: style)
+      (link_to '注册', new_user_registration_path, class: style + (active? new_user_registration_path).to_s) +
+        ' '.html_safe +
+        (link_to '登录', new_user_session_path, class: style + (active? new_user_session_path).to_s)
     else
-      link_to "退出", destroy_user_session_path, method: :delete, class: style
+      (link_to '个人中心', me_path, class: style + (active? me_path).to_s) +
+        ' '.html_safe +
+        (link_to '退出', destroy_user_session_path, method: :delete, class: style)
     end
   end
 
@@ -17,7 +20,8 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    DevcampViewTool::Renderer.copyright 'lxb', 'All rights reserved'
+    "&copy; #{Time.now.year} | <b>lxb</b> All rights reserved".html_safe
+    # DevcampViewTool::Renderer.copyright 'lxb', 'All rights reserved'
   end
 
   def nav_items
@@ -43,13 +47,25 @@ module ApplicationHelper
     nav_links = ''
 
     nav_items.each do |item|
-      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{ active? item[:url] }'>#{item[:title]}</a></#{tag_type}>"
     end
 
     nav_links.html_safe
   end
 
   def active? path
-    "active" if current_page? path
+    ' active' if current_page? path
+  end
+
+  def alerts
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generator alert
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "lxb 提示", sticky: false)
   end
 end

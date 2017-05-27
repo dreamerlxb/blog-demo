@@ -18,16 +18,14 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-
           <%= render "shared/application_nav" %>
           <%= yield %>
 
-          <%= js add_gritter(flash[:notice], :title => "Pay attention!", :sticky => true) %>
+          <%= alerts %>
 
           <%= render "shared/application_footer" %>
 
           <%= source_helper("application") %>
-
         </div>
       </div>
     </div>
