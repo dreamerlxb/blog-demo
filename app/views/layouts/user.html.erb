@@ -1,31 +1,83 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="keywords" content="<%= @seo_keywords %>" />
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="keywords" content="<%= @seo_keywords %>"/>
   <%= favicon_link_tag 'favicon/favicon_me.ico' %>
   <title><%= @page_title %></title>
-
   <%= csrf_meta_tags %>
-
-  <%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+  <%= stylesheet_link_tag 'users', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
-<%= render 'shared/page_nav' %>
+<div id="loading" class=""></div>
+<%= render 'shared/user_sidebar' %>
 
-<div class="container-fluid">
-  <div class="row">
-    <%= render 'shared/user_sidebar' %>
-    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-      <%= yield %>
-    </main>
+<main id="main">
+  <%= render 'shared/user_header' %>
+
+  <div class="container body-wrap">
+    <ul class="post-list">
+
+      <li class="post-list-item fade in">
+        <article id="post-2017-5-11-KotlinDSL2" class="article-card article-type-post" itemprop="blogPost">
+          <div class="post-meta">
+            <time class="post-time" title="2017年05月15日 12:15" datetime="2017-05-15T04:15:15.000Z" itemprop="datePublished">2017-05-15</time>
+            <ul class="article-category-list">
+              <li class="article-category-list-item">
+                <a class="article-category-list-link" href="http://www.kotliner.cn/categories/Kotlin/">Kotlin</a></li>
+            </ul>
+          </div>
+          <h3 class="post-title" itemprop="name">
+            <a class="post-title-link" href="http://www.kotliner.cn/2017/05/15/2017-5-11-KotlinDSL2/">Kotlin 一个很厉害的 DSL
+              写法</a>
+          </h3>
+          <div class="post-content" id="post-content" itemprop="postContent">
+            好久没写博客了，今天发几个最近在各个地方看到的一些碉堡了的 Kotlin DSL。本文先介绍一种 DSL 写法，再推荐几个 DSL 项目。 超厉害的 DSL之前在 KotlinTest 上看到一个很牛逼的写法（我把
+            README 里的实例改了下）： 1234567891011121314class StringSpecExample : StringSpec() { init &amp;...
+            <a href="http://www.kotliner.cn/2017/05/15/2017-5-11-KotlinDSL2/" class="post-more waves-effect waves-button">
+              阅读全文...
+            </a>
+          </div>
+          <div class="post-footer">
+            <ul class="article-tag-list">
+              <li class="article-tag-list-item">
+                <a class="article-tag-list-link waves-effect waves-button" href="http://www.kotliner.cn/tags/Kotlin/">Kotlin</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </li>
+    </ul>
   </div>
+  <%= render 'shared/user_footer' %>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
+  <span class="icon icon-lg icon-chevron-up"></span>
+</a>
+<%= render 'shared/user_share' %>
+
+<div class="search-panel" id="search-panel">
+  <ul class="search-result" id="search-result"></ul>
 </div>
+<template id="search-tpl"></template>
+
+<%= javascript_include_tag 'users', 'data-turbolinks-track': 'reload' %>
+<script>
+    (function () {
+        var OriginTitile = document.title, titleTime;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                document.title = 'Kotlin 博客';
+                clearTimeout(titleTime);
+            } else {
+                document.title = 'Kotlin 博客';
+                titleTime = setTimeout(function () {
+                    document.title = OriginTitile;
+                }, 2000);
+            }
+        });
+    })();
+</script>
 </body>
 </html>

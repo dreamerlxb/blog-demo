@@ -1,12 +1,52 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse" style="padding-bottom: 0px; padding-top: 0px">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <a class="navbar-brand" href="#"><%= t('web_name') %></a>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
-      <%= nav_helper 'nav-link', 'span' %>
-      <%= login_helper 'nav-link' %>
+      <!--<%#= nav_helper 'nav-link', 'span' %>-->
+      <li class="nav-item lxb-nav-li">
+        <a href="#" class="nav-link active">首页</a>
+      </li>
+      <li class="nav-item lxb-nav-li">
+        <a href="#" class="nav-link">论坛</a>
+      </li>
+      <li class="nav-item lxb-nav-li">
+        <a href="#" class="nav-link">关于</a>
+      </li>
+      <li class="nav-item tray-li lxb-nav-li">
+        <a href="javascript: void(0)" class="nav-link tray-toggle">联系</a>
+        <div class="tray-dropdown">
+          <div class="tray-content">
+            <div class="container">
+              <div class="row">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3 class="font-primary-bold">
+                      <span>其他号码</span>
+                    </h3>
+                  </div>
+                </div>
+                <ul class="alt-contact-list list-unstyled">
+                  <li>
+                    <span>9:00-18:00, 周一至周五</span>
+                    <a class="headline-primary contact-link" data-eid="uxp.hyd.shared.utility_bar.support_phone.86_400_842_8288.click" href="tel:864008428288">(86) 400-842-8288</a>
+                  </li>
+                  <li>
+                    <span>9:00-18:00, 周一至周五</span>
+                    <a class="headline-primary contact-link" data-eid="uxp.hyd.shared.utility_bar.support_phone.65_6701_1359.click" href="tel:6567011359">65 6701 1359</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item tray-li lxb-nav-li">
+        <%= render 'shared/user_login' %>
+      </li>
     </ul>
     <form class="form-inline mt-2 mt-md-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">

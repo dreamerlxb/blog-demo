@@ -1,0 +1,79 @@
+<% if current_user.is_a?(GuestUser) %>
+  <a href="javascript: void(0)" class="nav-link tray-toggle">登陆</a>
+  <div class="tray-dropdown">
+    <div class="row">
+      <div class="col-lg-7 push-lg-5 m-b-3">
+        <div class="row">
+          <div class="col-lg-7 push-lg-5 col-md-6 sign-in divider">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class="font-primary-bold">
+                  <span>已注册用户</span>
+                </h3>
+              </div>
+            </div>
+            <p><span>已经有账户？立即登录。</span></p>
+            <a href="<%= new_user_session_path %>" class="btn btn-sm btn-primary" data-tcc-ignore="true">
+              <span>登录</span>
+            </a>
+          </div>
+          <div class="col-lg-5 pull-lg-7 col-md-6 sign-up divider">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class="font-primary-bold">
+                  <span>新用户</span>
+                </h3>
+              </div>
+            </div>
+            <p>
+              <span>不熟悉 GoDaddy 吗？</span>
+              <span>现在就创建账户，开始使用吧。</span>
+            </p>
+            <a href="<%= new_user_registration_path %>" class="btn btn-default btn-sm" data-tcc-ignore="true">
+              <span>创建账户</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 pull-lg-7 inbox-links">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="font-primary-bold"><span>快速链接</span></h3>
+          </div>
+        </div>
+        <div class="row quick-links">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><strong><span>控制面板链接：</span></strong></li>
+              <li>
+                <a href="https://dcc.godaddy.com" data-eid="uxp.hyd.sales_header.utility_bar.quick_links.control_panel_links.manage_domains.link.click" data-tcc-ignore="true"><span>管理域名</span></a>
+              </li>
+              <li>
+                <a href="https://mya.godaddy.com?accid=6" data-eid="uxp.hyd.sales_header.utility_bar.quick_links.control_panel_links.manage_website_builder.link.click" data-tcc-ignore="true"><span>管理建站神器</span></a>
+              </li>
+              <li>
+                <a href="https://gateway.godaddy.com" data-eid="uxp.hyd.sales_header.utility_bar.quick_links.control_panel_links.manage_hosting.link.click" data-tcc-ignore="true"><span>管理虚拟主机</span></a>
+              </li>
+              <li>
+                <a href="https://mya.godaddy.com?accid=33" data-eid="uxp.hyd.sales_header.utility_bar.quick_links.control_panel_links.manage_ssl_certificates.link.click" data-tcc-ignore="true"><span>管理 SSL 证书</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li><strong><span>收件箱链接：</span></strong></li>
+              <li>
+                <a href="https://email.godaddy.com?target=_blank" data-eid="uxp.hyd.sales_header.utility_bar.quick_links.inbox_links.webmail_login.link.click" data-tcc-ignore="true">
+                  <span>GoDaddy Webmail 登录</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <a href="<%= me_path %>" class="nav-link">个人中心</a>
+<% end %>
