@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   layout 'user'
-  access site_admin: :all
+  # access site_admin: :all
 
   def index
     

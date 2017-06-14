@@ -7,6 +7,9 @@
   <title><%= @page_title %></title>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag 'users', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <script>
+      window.lazyScripts = []
+  </script>
 </head>
 <body>
 <div id="loading" class=""></div>
@@ -61,6 +64,16 @@
   <ul class="search-result" id="search-result"></ul>
 </div>
 <template id="search-tpl"></template>
+
+<script>
+  var BLOG = {
+      ROOT: '/',
+      SHARE: true,
+      REWARD: false
+  };
+
+  lazyScripts.push('//s95.cnzz.com/z_stat.php?id=1261686164&web_id=1261686164')
+</script>
 
 <%= javascript_include_tag 'users', 'data-turbolinks-track': 'reload' %>
 <script>

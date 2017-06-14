@@ -1,6 +1,5 @@
-//= require busuanzi.pure.mini
-//= require main.min
 //= require push
-//= require search.min
 //= require waves.min
-
+//= require main.min
+//= require search.min
+//= require busuanzi.pure.mini

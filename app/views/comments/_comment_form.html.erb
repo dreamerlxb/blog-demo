@@ -1,4 +1,4 @@
-<% if logged_in?(:site_admin) %>
+<% if can? :create, Comment %>
     <div>
       <%= form_for :comment, url: '#', html: { class: 'new_comment', id: 'new_comment' } do |f| %>
           <div class="form-group">
